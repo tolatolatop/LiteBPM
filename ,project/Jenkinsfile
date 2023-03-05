@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build'){
+            steps {
+                sh 'echo hello LiteBPM'
+            }
+        }
+        stage('Test'){
+            steps {
+                sh 'echo nice to meet you'
+            }
+        }
+    }
+}
