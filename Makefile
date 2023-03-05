@@ -50,4 +50,4 @@ $(SERVICE_NAME)/up:
 	$(DOCKER) run -itd --name $(SERVICE_NAME) -p $(PORT):8000 $(IMAGE_NAME):$(VERSION)
 
 shell:
-	$(DOCKER) exec -itd --name $(SERVICE_NAME) sh
+	$(DOCKER) exec -it $(SERVICE_NAME) sh
