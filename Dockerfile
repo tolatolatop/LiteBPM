@@ -10,4 +10,6 @@ EXPOSE 8000
 
 COPY lite_bpm .
 
-CMD ["uvicorn", "main:app", "--reload", "--host", "0.0.0.0"]
+RUN python3 manage.py migrate
+
+CMD ["python", "manage.py", "0.0.0.0:8000"]
