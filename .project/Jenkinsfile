@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Test'){
             steps {
-                sh 'make up'
+                sh 'make up || make reboot'
             }
         }
         stage('Clean') {
